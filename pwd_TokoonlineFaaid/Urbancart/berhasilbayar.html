@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pembayaran Berhasil | UrbanCart</title>
+
+    <link rel="stylesheet" href="css/berhasil.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="success">
+
+        <div class="box">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h1>Pembayaran Berhasil</h1>
+
+            <p>
+
+                Terima kasih telah berbelanja di <strong>UrbanCart</strong>.
+
+                Pesanan kamu sedang diproses dan akan segera dikirim.
+
+            </p>
+
+            <div class="status">
+
+                Sedang Diproses
+
+            </div>
+
+            <div class="order">
+
+                <div class="item">
+
+                    <span>Nomor Pesanan</span>
+
+                    <strong id="orderNumber"></strong>
+
+                </div>
+
+                <div class="item">
+
+                    <span>Tanggal</span>
+
+                    <strong id="today"></strong>
+
+                </div>
+
+                <div class="item">
+
+                    <span>Total Pembayaran</span>
+
+                    <strong id="successTotal">Rp0</strong>
+
+                </div>
+
+            </div>
+
+            <div class="button-group">
+
+                <a href="index.html" onclick="selesaiBelanja()">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Kembali ke</span>
+
+                    <h3>Beranda</h3>
+
+                </a>
+
+                <a href="pesanan.html">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    <span>Lihat</span>
+
+                    <h3>Pesanan</h3>
+
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        // ==========================
+        // TOTAL PEMBAYARAN
+        // ==========================
+
+        const total = localStorage.getItem("checkoutTotal") || 0;
+
+        document.getElementById("successTotal").innerHTML =
+            "Rp " + Number(total).toLocaleString("id-ID");
+
+
+
+        // ==========================
+        // NOMOR PESANAN
+        // ==========================
+
+        const nomor =
+            "#UC" + Math.floor(100000 + Math.random() * 900000);
+
+        document.getElementById("orderNumber").innerHTML = nomor;
+
+
+
+        // ==========================
+        // TANGGAL
+        // ==========================
+
+        const sekarang = new Date();
+
+        document.getElementById("today").innerHTML =
+            sekarang.toLocaleDateString("id-ID", {
+
+                day: "numeric",
+
+                month: "long",
+
+                year: "numeric"
+
+            });
+
+
+
+        // ==========================
+        // SELESAI BELANJA
+        // ==========================
+
+        function selesaiBelanja() {
+
+            localStorage.removeItem("cart");
+
+            localStorage.removeItem("checkoutTotal");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

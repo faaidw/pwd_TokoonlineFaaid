@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UrbanCart | Keranjang</title>
+
+    <link rel="stylesheet" href="css/keranjang.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <h2>UrbanCart</h2>
+
+        </div>
+
+        <div class="search-box">
+
+            <input type="text" placeholder="Cari produk...">
+
+            <button>
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+        </div>
+
+        <!-- Hamburger (Mobile) -->
+        <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="navMenu">
+
+            <a href="index.html">Beranda</a>
+
+            <a href="#">Kategori</a>
+
+            <a href="#">Promo</a>
+
+            <a href="keranjang.html">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span id="cart-count">0</span>
+
+            </a>
+
+            <a href="login.html" class="login-btn">
+
+                Login
+
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= TITLE ================= -->
+
+    <section class="page-title">
+
+        <h1>Keranjang Belanja</h1>
+
+        <p>Periksa kembali produk yang akan kamu beli.</p>
+
+    </section>
+
+    <!-- ================= CONTENT ================= -->
+
+    <section class="cart-container">
+
+        <!-- ================= PRODUK ================= -->
+
+        <div class="cart-list" id="cart-list">
+
+        </div>
+
+        <!-- ================= CHECKOUT ================= -->
+
+        <aside class="checkout">
+
+            <h2>Ringkasan Belanja</h2>
+
+            <div class="summary">
+
+                <div>
+
+                    <span>Subtotal</span>
+
+                    <span id="subtotal">Rp0</span>
+
+                </div>
+
+                <div>
+
+                    <span>Ongkir</span>
+
+                    <span>Gratis</span>
+
+                </div>
+
+                <div>
+
+                    <span>Diskon</span>
+
+                    <span id="diskon">Rp0</span>
+
+                </div>
+
+            </div>
+
+            <div class="total">
+
+                <span>Total</span>
+
+                <h1 id="total">Rp0</h1>
+
+            </div>
+
+            <h3>Data Pembeli</h3>
+
+            <input type="text" placeholder="Nama Lengkap">
+
+            <input type="text" placeholder="Nomor HP">
+
+            <textarea placeholder="Alamat Lengkap"></textarea>
+
+            <h3>Metode Pembayaran</h3>
+
+            <label>
+
+                <input type="radio" checked name="pay">
+
+                Transfer Bank
+
+            </label>
+
+            <label>
+
+                <input type="radio" name="pay">
+
+                E-Wallet
+
+            </label>
+
+            <label>
+
+                <input type="radio" name="pay">
+
+                COD
+
+            </label>
+
+            <button class="checkout-btn" onclick="checkout()">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                Bayar Sekarang
+
+            </button>
+
+        </aside>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
