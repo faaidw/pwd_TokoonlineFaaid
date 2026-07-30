@@ -445,6 +445,38 @@ footer {
 
 /* ================= RESPONSIVE ================= */
 
+/* Hamburger */
+
+.hamburger {
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 5px;
+}
+
+.hamburger span {
+	width: 28px;
+	height: 3px;
+	background: #fff;
+	border-radius: 3px;
+	transition: .3s;
+}
+
+.hamburger.active span:nth-child(1) {
+	transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+	transform: rotate(-45deg) translate(6px, -6px);
+}
+
 @media(max-width:992px) {
 
 	.detail {
@@ -481,6 +513,46 @@ footer {
 
 		gap: 20px;
 
+		position: relative;
+
+	}
+
+	.hamburger {
+
+		display: flex;
+
+	}
+
+	nav {
+
+		display: none;
+
+		position: absolute;
+
+		top: 100%;
+
+		left: 0;
+
+		width: 100%;
+
+		background: #181818;
+
+		flex-direction: column;
+
+		align-items: center;
+
+		padding: 25px 0;
+
+		gap: 20px;
+
+		box-shadow: 0 10px 20px rgba(0, 0, 0, .4);
+
+	}
+
+	nav.active {
+
+		display: flex;
+
 	}
 
 }
@@ -510,6 +582,69 @@ footer {
 	.price {
 
 		font-size: 30px;
+
+	}
+
+	.breadcrumb {
+
+		padding: 20px;
+
+		font-size: 14px;
+
+	}
+
+	.size button {
+
+		width: 45px;
+
+		height: 45px;
+
+	}
+
+	.description,
+	.specification {
+
+		padding: 25px 20px;
+
+	}
+
+}
+
+@media(max-width:400px) {
+
+	header {
+
+		padding: 15px;
+
+	}
+
+	.logo h2 {
+
+		font-size: 22px;
+
+	}
+
+	.main-image img {
+
+		height: 250px;
+
+	}
+
+	.info h1 {
+
+		font-size: 24px;
+
+	}
+
+	.price {
+
+		font-size: 26px;
+
+	}
+
+	.feature {
+
+		gap: 12px;
 
 	}
 

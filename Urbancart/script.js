@@ -437,3 +437,19 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCartBadge();
 
 });
+
+// =======================
+// HAMBURGER MENU TOGGLE
+// =======================
+
+function toggleMenu() {
+
+    const nav = document.getElementById("navMenu");
+
+    const hamburger = document.querySelector(".hamburger");
+
+    if (nav) nav.classList.toggle("active");
+
+    if (hamburger) hamburger.classList.toggle("active");
+
+}

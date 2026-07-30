@@ -633,3 +633,486 @@ nav a:hover {
     margin-bottom: 35px;
 
 }
+
+/* ==========================================
+            FOOTER
+========================================== */
+
+.footer-content {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+
+    margin-bottom: 30px;
+
+}
+
+.footer-content h2 {
+
+    margin-bottom: 10px;
+
+}
+
+.footer-content h3 {
+
+    margin-bottom: 15px;
+
+}
+
+.footer-content a {
+
+    display: block;
+
+    color: #bbb;
+
+    margin-bottom: 8px;
+
+    text-decoration: none;
+
+}
+
+.footer-content a:hover {
+
+    color: #fff;
+
+}
+
+.footer-content p {
+
+    color: #bbb;
+
+}
+
+footer hr {
+
+    border: none;
+
+    border-top: 1px solid #333;
+
+    margin-bottom: 20px;
+
+}
+
+.copyright {
+
+    text-align: center;
+
+    color: #888;
+
+}
+
+/* ==========================================
+        HAMBURGER MENU
+========================================== */
+
+.hamburger {
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    background: none;
+
+    border: none;
+
+    padding: 5px;
+
+}
+
+.hamburger span {
+
+    width: 28px;
+
+    height: 3px;
+
+    background: #fff;
+
+    border-radius: 3px;
+
+    transition: .3s;
+
+}
+
+.hamburger.active span:nth-child(1) {
+
+    transform: rotate(45deg) translate(6px, 6px);
+
+}
+
+.hamburger.active span:nth-child(2) {
+
+    opacity: 0;
+
+}
+
+.hamburger.active span:nth-child(3) {
+
+    transform: rotate(-45deg) translate(6px, -6px);
+
+}
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+/* Tablet */
+
+@media(max-width: 1024px) {
+
+    section {
+
+        padding: 60px 5%;
+
+    }
+
+    .hero-text h1 {
+
+        font-size: 44px;
+
+        line-height: 58px;
+
+    }
+
+    .kategori-box {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .footer-content {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width: 768px) {
+
+    section {
+
+        padding: 50px 4%;
+
+    }
+
+    /* Navbar */
+
+    header {
+
+        height: auto;
+
+        padding: 15px 5%;
+
+        flex-wrap: wrap;
+
+        position: relative;
+
+    }
+
+    .hamburger {
+
+        display: flex;
+
+    }
+
+    .search-box {
+
+        width: 100%;
+
+        order: 3;
+
+        margin-top: 10px;
+
+    }
+
+    nav {
+
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #111;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 25px 0;
+
+        gap: 20px;
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .4);
+
+    }
+
+    nav.active {
+
+        display: flex;
+
+    }
+
+    /* Hero */
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+
+        margin-top: 140px;
+
+    }
+
+    .hero-text h1 {
+
+        font-size: 36px;
+
+        line-height: 48px;
+
+    }
+
+    .hero-text span {
+
+        font-size: 15px;
+
+    }
+
+    .hero-text p {
+
+        font-size: 16px;
+
+        line-height: 28px;
+
+    }
+
+    .hero-button {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+    /* Kategori */
+
+    .kategori h2 {
+
+        font-size: 30px;
+
+        margin-bottom: 35px;
+
+    }
+
+    .kategori-box {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+
+    }
+
+    .kategori-card {
+
+        padding: 25px 15px;
+
+    }
+
+    .kategori-card i {
+
+        font-size: 35px;
+
+    }
+
+    .kategori-card h3 {
+
+        font-size: 16px;
+
+    }
+
+    /* Produk */
+
+    .produk h2 {
+
+        font-size: 30px;
+
+        margin-bottom: 40px;
+
+    }
+
+    .product-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+    }
+
+    .product-card img {
+
+        height: 220px;
+
+    }
+
+    .product-card h3 {
+
+        font-size: 20px;
+
+    }
+
+    .new-price {
+
+        font-size: 24px;
+
+    }
+
+    /* Promo */
+
+    .promo {
+
+        padding: 50px 4%;
+
+    }
+
+    .promo-box {
+
+        padding: 40px 25px;
+
+        border-radius: 20px;
+
+    }
+
+    .promo-box h2 {
+
+        font-size: 28px;
+
+    }
+
+    .promo-box p {
+
+        font-size: 15px;
+
+    }
+
+    /* Footer */
+
+    .footer-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        text-align: center;
+
+    }
+
+}
+
+/* Small Mobile */
+
+@media(max-width: 480px) {
+
+    .hero {
+
+        margin-top: 150px;
+
+    }
+
+    .hero-text h1 {
+
+        font-size: 28px;
+
+        line-height: 40px;
+
+    }
+
+    .hero-text p {
+
+        font-size: 14px;
+
+    }
+
+    .btn-primary,
+    .btn-secondary {
+
+        padding: 14px 25px;
+
+        font-size: 14px;
+
+    }
+
+    .kategori-box {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+
+    }
+
+    .kategori-card {
+
+        padding: 20px 10px;
+
+    }
+
+    .kategori-card i {
+
+        font-size: 28px;
+
+        margin-bottom: 10px;
+
+    }
+
+    .kategori-card h3 {
+
+        font-size: 14px;
+
+    }
+
+    .product-card img {
+
+        height: 180px;
+
+    }
+
+    .product-card h3 {
+
+        font-size: 18px;
+
+    }
+
+    .new-price {
+
+        font-size: 22px;
+
+    }
+
+    .old-price {
+
+        font-size: 14px;
+
+    }
+
+    .promo-box h2 {
+
+        font-size: 24px;
+
+    }
+
+}
